@@ -3,10 +3,10 @@
 前端资源的收集
 
 ## 前端技能
-![skills](https://raw.githubusercontent.com/JingwenTian/CodeLibrary/master/javascript/_img/skill.png)
+![skills](https://raw.githubusercontent.com/JingwenTian/CodeLibrary/master/frontend/javascript/_img/skill.png)
 
 @拔赤
-![skills](https://raw.githubusercontent.com/JingwenTian/CodeLibrary/master/javascript/_img/skill02.jpg)
+![skills](https://raw.githubusercontent.com/JingwenTian/CodeLibrary/master/frontend/javascript/_img/skill02.jpg)
 
 ## 浏览器
 + Chrome ([Chrome Canary](https://tools.google.com/dlpage/chromesxs "chrome canary"))
