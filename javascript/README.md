@@ -6,7 +6,7 @@
 ![skills](https://raw.githubusercontent.com/JingwenTian/CodeLibrary/master/javascript/_img/skill.png)
 
 @拔赤
-![skills](https://raw.githubusercontent.com/JingwenTian/CodeLibrary/master/javascript/_img/skill02.png)
+![skills](https://raw.githubusercontent.com/JingwenTian/CodeLibrary/master/javascript/_img/skill02.jpg)
 
 ## 浏览器
 + Chrome ([Chrome Canary](https://tools.google.com/dlpage/chromesxs "chrome canary"))
