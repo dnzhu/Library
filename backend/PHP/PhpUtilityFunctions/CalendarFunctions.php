@@ -3,13 +3,13 @@
 /**
  * PHP日历函数 
  */
- 
-## cal_days_in_month — 返回某个历法中某年中某月的天数
-如同:
+
+cal_days_in_month() // — 返回某个历法中某年中某月的天数
+//如同:
 function cal_days_in_month($calendar=1, $month, $year) { 
   return date('t', mktime(0, 0, 0, $month, 1, $year)); 
 } 
-## cal_info — 返回选定历法的信息
+cal_info() // — 返回选定历法的信息
 
 //-------------------------------------------------
 
