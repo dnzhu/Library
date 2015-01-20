@@ -11,5 +11,6 @@ $diff = time() - $start;
  
 print "This page needed $diff seconds to load :-)";
 
+
 // if you want a more exact value, you could use the 
 // microtime function
