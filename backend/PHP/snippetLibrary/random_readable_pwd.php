@@ -1,5 +1,6 @@
 <?php 
 
+
 function random_readable_pwd($length=10){
  
     // the wordlist from which the password gets generated 
