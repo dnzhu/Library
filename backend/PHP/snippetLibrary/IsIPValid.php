@@ -24,3 +24,4 @@ var_dump(IsIPValid('127001'));
  
 var_dump(IsIPValid('127.0.0.1'));
 // => bool(true)
+
