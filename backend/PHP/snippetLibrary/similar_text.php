@@ -21,6 +21,7 @@ while(list($id, $str) = each($words)){
     print round($percent) . "%\n";
 }
  
+ 
 /*
 Results:
  
