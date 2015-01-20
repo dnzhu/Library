@@ -2,6 +2,7 @@
 // Start output buffering, this will
 // catch all content so that we can 
 // do some calculations
+
 ob_start();
  
  
