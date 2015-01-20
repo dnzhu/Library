@@ -1,5 +1,4 @@
 <?php
-
 //This function returns the last argument (filename or directory name) of an given path.
 
 function path_get_last_arg($path){
@@ -18,3 +17,4 @@ print path_get_last_arg('/htdocs/usr1/web/');
  
 print path_get_last_arg('1/2/3/4');
 // => returns '4'
+
