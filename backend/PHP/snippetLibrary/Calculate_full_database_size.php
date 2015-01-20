@@ -2,6 +2,7 @@
 
 //Calculates the total size of a MySQL database in KB/MB or GB...
 
+
 function CalcFullDatabaseSize($database, $db) {
  
     $tables = mysql_list_tables($database, $db);
