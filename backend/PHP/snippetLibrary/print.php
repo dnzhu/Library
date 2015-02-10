@@ -22,6 +22,8 @@ $v = array(1,2,3,array(1,2,3));
 dval($v);
 dval($v, 1, 'print_r');
 
+//------------------------------------------------------------------------------------------
+
 /**
  * 输出各种类型的数据，调试程序时打印数据使用。
  * @param	mixed	参数：可以是一个或多个任意变量或值
@@ -48,3 +50,37 @@ function p(){
 	}
 	echo '</pre></div>';
 }
+
+//------------------------------------------------------------------------------------------
+
+//array_walk debug example
+
+function debug_val($val, $key='', $depth=0) {
+ 
+    if (is_array($val)){
+        // call this function again with the "sub-array":
+        array_walk($val, 'debug_val', $depth+5);
+    }
+    else {
+        // if we hit a string or bool, etc. then print it:
+        print str_repeat('&nbsp;', $depth);          
+        print '<span style="color: blue;">' . $key . '</span>: ';
+        print var_export($val, true);
+        print "<br/>\n";
+    }
+}
+ 
+ 
+/*example-start*/
+ 
+// setup the test array 
+$array = array(
+    'php', 
+    'cool', 
+    array('foo', 1,2,3, array('mixed' => 'bar')),
+    'php' => 'array', 
+    'yes' => true, 'no' => false
+);
+ 
+// debug the array
+debug_val($array);
