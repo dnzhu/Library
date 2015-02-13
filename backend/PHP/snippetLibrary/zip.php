@@ -1,5 +1,7 @@
 <?php
 
+//ZipArchive 类 http://php.net/manual/zh/class.ziparchive.php
+
 /**
  * PHP压缩文件 
  */
@@ -53,4 +55,4 @@ function unzip_file($file, $destination){
     echo '成功';
 }
 
-unzip_file("a.zip","b");
+unzip_file("a.zip","./"); //解压缩在当前文件
