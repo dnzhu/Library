@@ -9,4 +9,5 @@
 - [phpsnips.com](http://phpsnips.com/main.php)
 - [catswhocode.com](http://www.catswhocode.com/blog/useful-snippets-for-php-developers)
 - [finalwebsites.com](http://www.finalwebsites.com/snippets.php)
+- [css-tricks.com](http://css-tricks.com/snippets/php/)
 
