@@ -3,45 +3,41 @@
 ##JavaScript技巧篇
 
 
-###1. 状态机
+###1. 有限状态机
 
-    var state = function () {
-               this.count = 0;
-               this.fun = null;
-               this.nowcount = 0;
-     
-           };     
-           state.prototype = {
-               load: function (count,fun) {
-                   this.count = count;
-                   this.fun = fun;
-                   this.nowcount=0;
-               },
-               trigger: function () {
-                   this.nowcount++;
-                   if (this.nowcount >= this.count){
-                       this.fun();
-                   }
-               }
-           };
-     
-           //--------------<br>
-           function method1() {
-               s.trigger();
-           }
-           function method2() {
-               s.trigger();
-           }
-           var s = new state();
-           s.load(2, function () {
-               console.log('执行完毕');
-           });
-           setTimeout(method1, 1000);
-           setTimeout(method2, 1000);
+    var menu = {
+    　　    
+    　　　　// 当前状态
+    　　　　currentState: 'hide',
+    　　
+    　　　　// 绑定事件
+    　　　　initialize: function() {
+    　　　　　　var self = this;
+    　　　　　　self.on("hover", self.transition);
+    　　　　},
+    　　
+    　　　　// 状态转换
+    　　　　transition: function(event){
+    　　　　　　switch(this.currentState) {
+    　　　　　　　　case "hide":
+    　　　　　　　　　　this.currentState = 'show';
+    　　　　　　　　　　doSomething();
+    　　　　　　　　　　break;
+    　　　　　　　　case "show":
+    　　　　　　　　　　this.currentState = 'hide';
+    　　　　　　　　　　doSomething();
+    　　　　　　　　　　break;
+    　　　　　　　　default:
+    　　　　　　　　　　console.log('Invalid State!');
+    　　　　　　　　　　break;
+    　　　　　　}
+    　　　　}
+    　　
+    　　};
+    　
+一个有限状态机的函数库[Javascript Finite State Machine](https://github.com/jakesgordon/javascript-state-machine)。这个库非常好懂，可以帮助我们加深理解，而且功能一点都不弱。
 
-状态机一般用在多个异步任务的情况下，任务执行到某个阶段执行某个函数!
 
-场景：同时请求多个异步执行[并发异步or异步串行](ajax,nodejs的io)，并处理结果集合，以上的写法最简单，但却不够优美
 
 ###2. setTimeout 的特殊应用
 
@@ -178,3 +174,4 @@
 
 - [我希望我知道的七个JavaScript技巧](http://yanhaijing.com/javascript/2014/04/23/seven-javascript-quirks-i-wish-id-known-about/)
 - [JavaScript技巧&写法](http://www.cnblogs.com/dark89757/p/4287547.html)
+- [JavaScript与有限状态机](http://www.ruanyifeng.com/blog/2013/09/finite-state_machine_for_javascript.html)
