@@ -44,9 +44,9 @@
     var hander=setTimeout(function () { },100);
     clearTimeout(hander);
 
-**场景1：*** 按钮三次快速点击才触发事件　　
+**场景1：** 按钮三次快速点击才触发事件　　
 
-    var num = 0;
+        var num = 0;
         var hander = 0;
         function btnClick() {
             if (hander != 0){
@@ -67,11 +67,13 @@
         function Run() {
             console.log('Run');
         }
-    <input type="button" onclick="btnClick()" value="快速点击三次触发" />　
+        
+        <input type="button" onclick="btnClick()" value="快速点击三次触发" />　
+
     
 **场景2：** 快速多次点击只触发最后一次
 
-    var hander = 0;
+        var hander = 0;
         function btnClick() {
             if (hander != 0) {
                 clearTimeout(hander);
@@ -84,7 +86,7 @@
         function Run() {
             console.log('Run');
         }
-    <input type="button" onclick="btnClick()" value="快速点击只触发最后一次" />
+        <input type="button" onclick="btnClick()" value="快速点击只触发最后一次" />
     
 
 ##JavaScript写法篇：
@@ -160,7 +162,6 @@
         doThisOtherThing : function() { /* behavior */ },
         default          : function() { /* behavior */ }
     };
-    
     var doSomething = function(doWhat) {
         var thingToDo = thingsWeCanDo.hasOwnProperty(doWhat) ? doWhat : "default"
         thingsWeCanDo[thingToDo]();
