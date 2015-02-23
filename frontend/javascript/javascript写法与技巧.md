@@ -176,3 +176,4 @@
 - [我希望我知道的七个JavaScript技巧](http://yanhaijing.com/javascript/2014/04/23/seven-javascript-quirks-i-wish-id-known-about/)
 - [JavaScript技巧&写法](http://www.cnblogs.com/dark89757/p/4287547.html)
 - [JavaScript与有限状态机](http://www.ruanyifeng.com/blog/2013/09/finite-state_machine_for_javascript.html)
+- [有用的JavaScript技巧](http://www.css88.com/archives/5126)
