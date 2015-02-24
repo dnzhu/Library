@@ -83,6 +83,9 @@ website: http://www.jingwentian.com
 
 ![sharpxiajun][90]&nbsp;&nbsp;[夏天的森林][91]
 
+![ttlsa][92]&nbsp;&nbsp;[运维生存时间][93]
+
+
 ##社交
 
 ![gurudigger][20]&nbsp;&nbsp;[GuruDigger - 帮助靠谱的互联网工程师找到最适合的创业团队][21]
@@ -238,3 +241,6 @@ website: http://www.jingwentian.com
 
 [90]: http://api.jingwentian.com/favicon/?url=www.cnblogs.com
 [91]: http://www.cnblogs.com/sharpxiajun/
+
+[92]: http://api.jingwentian.com/favicon/?url=www.ttlsa.com
+[93]: http://www.ttlsa.com/
