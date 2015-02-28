@@ -1,6 +1,8 @@
 #前端组件库
 >搭建web app常用的插件列表(移动优先)
 
+已移至: [awesome-fronted](https://github.com/JingwenTian/awesome-fronted)
+
 ##1. 前端框架
 
 - [Amaze UI](http://amazeui.org/)
