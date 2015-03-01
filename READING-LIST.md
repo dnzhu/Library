@@ -247,5 +247,5 @@ website: http://www.jingwentian.com
 [92]: http://api.jingwentian.com/favicon/?url=www.ttlsa.com
 [93]: http://www.ttlsa.com/
 
-[92]: http://api.jingwentian.com/favicon/?url=www.pingwest.com
-[93]: http://www.pingwest.com/
+[94]: http://api.jingwentian.com/favicon/?url=www.pingwest.com
+[95]: http://www.pingwest.com/
