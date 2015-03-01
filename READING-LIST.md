@@ -23,6 +23,8 @@ website: http://www.jingwentian.com
 
 ![DCD][74]&nbsp;&nbsp;[DCD][75]
 
+![PingWest][94]&nbsp;&nbsp;[PingWest品玩][95]
+
 ##社区
 
 ![V2EX][10]&nbsp;&nbsp;[V2EX - 一个关于分享和探索的地方][11]
@@ -244,3 +246,6 @@ website: http://www.jingwentian.com
 
 [92]: http://api.jingwentian.com/favicon/?url=www.ttlsa.com
 [93]: http://www.ttlsa.com/
+
+[92]: http://api.jingwentian.com/favicon/?url=www.pingwest.com
+[93]: http://www.pingwest.com/
