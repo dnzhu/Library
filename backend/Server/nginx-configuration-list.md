@@ -1,4 +1,4 @@
-##Nginx下安装配置PageSpeed模块 `ngx_pagespeed`
+##0. Nginx下安装配置PageSpeed模块 `ngx_pagespeed`
 
 [Build ngx_pagespeed From Source](https://developers.google.com/speed/pagespeed/module/build_ngx_pagespeed_from_source)
 
@@ -18,7 +18,7 @@
     wget https://dl.google.com/dl/page-speed/psol/${NPS_VERSION}.tar.gz
     tar -xzvf ${NPS_VERSION}.tar.gz  # extracts to psol/
     
-**2. 下载并编译Nginx (支持pagespeed)**
+**2. 下载并编译Nginx (支持 `pagespeed` )**
 
     cd /downloads
     # 获取NGINX最新版本 http://nginx.org/en/download.html 
@@ -32,6 +32,7 @@
     # 增加ngx_pagespeed模块重新编译(注意pagespeed的路径)
     ./configure --user=www --group=www --prefix=/usr/local/nginx --with-http_stub_status_module --with-http_ssl_module --with-http_gzip_static_module --with-ipv6 --add-module=../ngx_pagespeed-release-${NPS_VERSION}-beta
     make
+    # 在未安装nginx的情况下
     sudo make install
 
 **3. 使用ngx_pagespeed**
@@ -101,3 +102,41 @@
         0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
         X-Page-Speed: 1.9.32.3-4448
     
+##1. Nginx过滤替换内容模块 `substitutions4nginx`
+
+- [模块开发者主页](http://code.google.com/p/substitutions4nginx/)
+- [This module has been moved to github](https://github.com/yaoweibin/ngx_http_substitutions_filter_module/)
+
+**1. 下载**
+
+    cd /downloads
+    wget https://github.com/yaoweibin/ngx_http_substitutions_filter_module/
+    unzip master.zip
+    mv ngx_http_substitutions_filter_module-master/ ngx_http_substitutions_filter_module
+    
+**2. 下载并编译Nginx (支持 `substitutions4nginx` ) [同上]**
+
+    cd /downloads
+    # 获取NGINX最新版本 http://nginx.org/en/download.html 
+    NGINX_VERSION=1.6.2
+    wget http://nginx.org/download/nginx-${NGINX_VERSION}.tar.gz
+    tar -xvzf nginx-${NGINX_VERSION}.tar.gz
+    cd nginx-${NGINX_VERSION}/
+    # 查看线上版本编译参数
+    /usr/local/nginx/sbin/nginx -V
+      configure arguments: --user=www --group=www --prefix=/usr/local/nginx --with-http_stub_status_module --with-http_ssl_module --with-http_gzip_static_module --with-ipv6 --add-module=../ngx_pagespeed-release-1.9.32.3-beta
+    # 增加ngx_pagespeed模块重新编译(注意pagespeed的路径)
+    ./configure --user=www --group=www --prefix=/usr/local/nginx --with-http_stub_status_module --with-http_ssl_module --with-http_gzip_static_module --with-ipv6 --add-module=../ngx_pagespeed-release-1.9.32.3-beta  --add-module=../ngx_http_substitutions_filter_module
+    make
+    # 在未安装nginx的情况下
+    sudo make install
+    
+**3. 应用实例**
+
+    location / {
+    
+        subs_filter_types text/html text/css text/xml;
+        subs_filter st(\d*).example.com $1.example.com ir;
+        subs_filter a.example.com s.example.com;
+    
+    }
