@@ -1,3 +1,36 @@
+##如何安装nginx第三方模块
+>nginx文件非常小但是性能非常的高效,这方面完胜apache,nginx文件小的一个原因之一是nginx自带的功能相对较少,好在nginx允许第三方模块,第三方模块使得nginx越发的强大.在安装模块方面,nginx显得没有apache安装模块方便，当然也没有php安装扩展方便.在原生的nginx,他不可以动态加载模块,所以当你安装第三方模块的时候需要覆盖nginx文件.接下来看看如何安装nginx第三模块吧.
+
+**nginx第三方模块安装方法:**
+
+    ./configure --prefix=/你的安装目录  --add-module=/第三方模块目录
+
+以安装pagespeed模块实例
+
+**在 `未安装nginx` 情况下安装nginx第三方模块**
+
+    # ./configure --prefix=/usr/local/nginx-1.6.2 \
+    --with-http_stub_status_module \
+    --with-http_ssl_module --with-http_realip_module \
+    --with-http_image_filter_module \
+    --add-module=../ngx_pagespeed-master --add-module=/第三方模块目录
+    # make
+    # make install
+
+**在 `已安装nginx` 情况下安装nginx模块**
+
+    # ./configure --prefix=/usr/local/nginx-1.6.2 \
+     --with-http_stub_status_module \
+     --with-http_ssl_module --with-http_realip_module \
+     --with-http_image_filter_module \
+     --add-module=../ngx_pagespeed-master
+    # make
+    # /etc/init.d/nginx restart
+
+安装 `nginx` 安装第三方模块实际上是使用 `-–add-module` 重新安装一次 `nginx` ，不要 `make install` 而是直接把编译目录下 `objs/nginx` 文件直接覆盖老的 `nginx` 文件.如果你需要安装 `多个nginx第三方模块` ,你只需要多指定几个相应的 `-–add-module` 即可.
+
+---
+
 ##0. Nginx下安装配置PageSpeed模块 `ngx_pagespeed`
 
 [Build ngx_pagespeed From Source](https://developers.google.com/speed/pagespeed/module/build_ngx_pagespeed_from_source)
