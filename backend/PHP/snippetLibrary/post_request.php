@@ -1,5 +1,5 @@
 <?php
-
+//[1]-----------------------------------------------------------------------------
 //How to do a POST request
 //This example shows how to do a simple POST request to another webserver by using a socket connection.
 
@@ -91,3 +91,25 @@ if ($result['status'] == 'ok'){
 else {
     echo 'A error occured: ' . $result['error']; 
 }
+
+//[2]-----------------------------------------------------------------------------
+
+/**
+	 * 对接口post数据
+	 * @access public
+	 * @param string $url 接口请求地址。
+	 * @param array $data 需要post的数据
+	 * @return string 返回的json数据
+	 */
+	function post($url,$post_data){
+		$ch = curl_init();
+		curl_setopt($ch, CURLOPT_URL, $url);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+		curl_setopt($ch, CURLOPT_TIMEOUT,$this->CURLtimeout);  
+		curl_setopt($ch, CURLOPT_POST, 1);
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $post_data);
+		$output = curl_exec($ch);
+		curl_close($ch);
+		return $output;
+	}
+
