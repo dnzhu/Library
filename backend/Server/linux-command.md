@@ -31,17 +31,17 @@
 14. 显示文件的UID和GID: `ls -n`
 15. ls命令和它的别名: `alias ls="ls -l"`
 
-    我们可以通过不加任何参数的alias命令来看到目前系统中可用的所有alias设置，当然它们同时也可以unalias来取消
-    
-    # alias
-    alias cp='cp -i'
-    alias l.='ls -d .* --color=auto'
-    alias ll='ls -l --color=auto'
-    alias ls='ls --color=auto'
-    alias mv='mv -i'
-    alias rm='rm -i'
-    alias which='alias | /usr/bin/which --tty-only --read-alias --show-dot --show-tilde'
-    
-    删除一项之前定义的alias设置，只需用unalias命令即可
-    
-    unalias ls
+        我们可以通过不加任何参数的alias命令来看到目前系统中可用的所有alias设置，当然它们同时也可以unalias来取消
+        
+        # alias
+        alias cp='cp -i'
+        alias l.='ls -d .* --color=auto'
+        alias ll='ls -l --color=auto'
+        alias ls='ls --color=auto'
+        alias mv='mv -i'
+        alias rm='rm -i'
+        alias which='alias | /usr/bin/which --tty-only --read-alias --show-dot --show-tilde'
+        
+        删除一项之前定义的alias设置，只需用unalias命令即可
+        
+        unalias ls
