@@ -11,3 +11,6 @@
   rsync --delete-before -a -H -v --progress --stats /root/blank/ ./
 
 这样我们要删除的 cache目录就会被清空了，删除的速 度会非常快。
+
+##2. Linux中的15个基本 `ls` 命令
+
