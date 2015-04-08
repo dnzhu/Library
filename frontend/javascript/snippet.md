@@ -12,3 +12,20 @@
 			return str;
 		}
 		alert('javascript截取字符串',10);
+		
+**`jQuery .keyup() delay`延迟搜索**
+> [jQuery .keyup() delay - stackoverflow](http://stackoverflow.com/questions/1909441/jquery-keyup-delay)
+
+		var delay = (function(){
+		  var timer = 0;
+		  return function(callback, ms){
+		    clearTimeout (timer);
+		    timer = setTimeout(callback, ms);
+		  };
+		})();
+		
+		$('input').keyup(function() {
+		    delay(function(){
+		      alert('Time elapsed!');
+		    }, 1000 );
+		});
