@@ -87,6 +87,8 @@ website: http://www.jingwentian.com
 
 ![ttlsa][92]&nbsp;&nbsp;[运维生存时间][93]
 
+![Just Fine][96][Just Fine][97]
+
 
 ##社交
 
@@ -249,3 +251,6 @@ website: http://www.jingwentian.com
 
 [94]: http://api.jingwentian.com/favicon/?url=www.pingwest.com
 [95]: http://www.pingwest.com/
+
+[94]: http://api.jingwentian.com/favicon/?url=avnpc.com
+[95]: http://avnpc.com/
