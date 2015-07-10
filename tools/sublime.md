@@ -14,3 +14,8 @@
         }
         
         通过Command + B / Ctrl + B 触发检测
+        
+        
+##版本控制插件
+
+- [GitGutter](https://github.com/jisaacks/GitGutter)
