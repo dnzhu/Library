@@ -1,6 +1,8 @@
 #Sublime 常用插件
 
-##语法检查插件
+##语法相关
+
+###语法检测
 
 - [sublimelinter-php](http://www.cnblogs.com/sirocco/p/3699094.html)
 - [在编译系统增加语法检测](https://www.moreofless.co.uk/sublime-text-php-build-system/)
@@ -15,7 +17,24 @@
         
         通过Command + B / Ctrl + B 触发检测
         
-        
-##版本控制插件
+###语法高亮
 
+- Bracket Highlighter
+        
+        
+##远程连接/版本控制插件
+
+- SFTP
 - [GitGutter](https://github.com/jisaacks/GitGutter)
+
+##文档处理
+
+- DocBlockr
+
+##格式相关
+
+- Alignment
+
+##前端相关
+
+- Emmet
