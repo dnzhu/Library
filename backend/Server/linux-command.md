@@ -4,11 +4,11 @@
 
 建立一个空的文件夹 
 
-  mkdir /root/blank 
+  	mkdir /root/blank 
 
 用rsync删除目标目录 
 
-  rsync --delete-before -a -H -v --progress --stats /root/blank/ ./
+  	rsync --delete-before -a -H -v --progress --stats /root/blank/ ./
 
 这样我们要删除的 cache目录就会被清空了，删除的速 度会非常快。
 
@@ -46,9 +46,9 @@
         
         unalias ls
         
-  ## `Find Command` Find 命令
+## `Find Command` Find 命令
   
-  >[查看详情](http://www.tecmint.com/35-practical-examples-of-linux-find-command/)
+>[查看详情](http://www.tecmint.com/35-practical-examples-of-linux-find-command/)
   
   
 
