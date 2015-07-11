@@ -8,9 +8,17 @@
 - [在编译系统增加语法检测](https://www.moreofless.co.uk/sublime-text-php-build-system/)
 
         tools->build system->New Build System增加以下内容,然后保存为 php.sublime-build
-    
+        
+        // osx
         {
           "cmd": ["php", "-l", "$file"],
+          "file_regex": "php$",
+          "selector": "source.php"
+        }
+        
+        // win, 依赖wamp环境
+        {
+          "cmd": ["C:\\workspace\\wamp\\bin\\php\\php5.5.12\\php.exe", "-l", "$file"],
           "file_regex": "php$",
           "selector": "source.php"
         }
