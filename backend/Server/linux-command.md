@@ -46,13 +46,13 @@
         
         unalias ls
         
-## `Find Command` Find 命令
+## 3. `Find Command` Find 命令
   
 >[查看详情](http://www.tecmint.com/35-practical-examples-of-linux-find-command/)
   
   
 
-> 按照名称查找
+**按照名称查找**
 
 1. 在当前目录查找文件
 
@@ -86,7 +86,7 @@
     	./login.php
     	./index.php
 
-> 按照权限查找
+**按照权限查找**
 
 1. 查找 777 权限的文件
 
@@ -130,7 +130,7 @@
 	    # find /tmp -type f -name ".*"
 
 
-> 按照所属组和所有者查找
+**按照所属组和所有者查找**
 
 1. 根据所有者查找文件
 
@@ -145,7 +145,7 @@
 	    # find /home -group developer
 
 
-> 按照日期和时间查找文件
+**按照日期和时间查找文件**
 
 1. 查找最近50天修改过的文件(modify)
 
@@ -167,7 +167,7 @@
 
 	    # find / -mmin -60
 
-> 根据文件大小查找文件
+**根据文件大小查找文件**
 
 1. 查找50M的文件
 
