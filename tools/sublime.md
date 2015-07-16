@@ -54,6 +54,7 @@
 
 >**参考**:
 
+- [Sublime Text 全程指南](http://lucida.me/blog/sublime-text-complete-guide/)
 - [Sublime Text 3常用快捷键](https://github.com/vino24/iminyao/issues/27)
 - [Sublime Text3插件之SideBarEnhancements侧边栏增强&浏览器预览](https://github.com/vino24/iminyao/issues/20)
 - [Sublime Text3插件之sublimeLinter](https://github.com/vino24/iminyao/issues/19)
