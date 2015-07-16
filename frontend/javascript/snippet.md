@@ -65,4 +65,39 @@
 			break;
 		}
 	};
+	
+**一些常用的验证**
+	
+	function checkemail(email){
+		if(email != ""){
+			var partten = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+			if(partten.test(email)){
+				return true;
+			}else{
+				return false;
+			}
+		}else{
+			return true;
+		}
+	}
+	
+	function checknumber(bank_card){
+		var number = /^\d+$/;
+		if(number.test(bank_card)){
+			return true;
+		}else{
+			return false;
+		}
+	}
+	
+	
+	function checktel(tel){
+		var partton = /^1[3,4,5,8]\d{9}$/;
+		if(partton.test(tel)){
+			return true;
+		}else{
+			return false;
+		}
+	}
+
 
