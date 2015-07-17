@@ -1,0 +1,775 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta  charset="utf-8" />
+	<title>快盘官方网站——超大免费空间，最快最安全的同步网盘</title>
+	<meta content="zh-CN" http-equiv="content-language" />
+	<meta content="快盘,KUAIPAN" name="author" />
+	<meta content="Copyright (c) 快盘 www.kuaipan.cn" name="copyright" />
+    <meta name="apple-itunes-app" content="app-id=379844545"/>
+    <meta name="keywords" content="网盘,快盘,快盘,同步盘,金山网盘,同步网盘,免费网盘,网盘下载,免费网络硬盘,网络U盘,登录快盘,微信快盘,微信收藏工具" />
+    <meta name="description" content="快盘是金山软件推出的免费网盘。超大免费空间，上传下载速度快，传输文件不再需要U盘和数据线，手机、电脑随时随地查看文件，是一款免费、安全的同步网盘。" />
+   	    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+		<!--[if lt IE 9]>
+	<script type="text/javascript" src="http://web.kuaipan.cn/js/html5.js"></script>	<![endif]-->
+	<link rel="stylesheet" type="text/css" href="http://web.kuaipan.cn/css/reset.css" /><link rel="stylesheet" type="text/css" href="http://web.kuaipan.cn/css/base.css" /><link rel="stylesheet" type="text/css" href="http://web.kuaipan.cn/css/plugins/dialog.css" /><style>
+body {
+    background:url('http://s2.kuaipan.cn/i/6/turnplate2/001.jpg') top center no-repeat #2ebef0;
+    font:Arial,Helvetica,sans-serif;
+    height:1054px;
+}
+
+#header {
+    width:960px;
+    margin:0 auto;
+}
+
+#turnplatewrapper {
+    height:693px;
+    width:693px;
+    background:url('http://s2.kuaipan.cn/i/6/turnplate2/009.png') top left no-repeat;
+    margin-top:240px;
+    margin-left:133px;
+    -moz-user-select:none;
+    user-select:none;
+}
+
+#turnplate {
+    height:693px;
+    width:693px;
+    position:relative;
+    background:url('http://s2.kuaipan.cn/i/6/turnplate2/004.png') top left no-repeat;
+}
+
+#turnplate #awards {
+    position:relative;
+    height:693px;
+    width:693px;
+    background:url('http://s2.kuaipan.cn/i/6/turnplate2/002.png') top left no-repeat;
+}
+
+#platebtn {
+    position:absolute;  
+    margin-top:235px;
+    margin-left:235px;
+    background:url('http://s2.kuaipan.cn/i/6/turnplate2/005.png') top left no-repeat;
+    height:254px;
+    width:254px;
+    cursor:pointer;
+}
+
+#platebtn.hover {
+    opacity:0.9;
+}
+
+#msg {
+    position:absolute;
+    display:none;
+    top:130px;
+    left:195px;
+    border-radius:5px;
+    color:#333;
+    border:3px solid #FED33f;
+    box-shadow:2px 2px 2px rgba(0,0,0,0.6);
+    background:#fffcf2;
+    width:200px;
+    padding:10px;
+    text-align:center;
+}
+
+#content {
+    width:960px;
+    margin:0 auto;
+}
+
+
+
+#init {
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:100px;
+    height:30px;
+    border-radius:5px;
+    color:#333;
+    border:3px solid #FED33f;
+    box-shadow:2px 2px 2px rgba(0,0,0,0.6);
+    background:#fffcf2;
+    width:250px;
+    padding:10px;
+    margin-top:-30px;
+    margin-left:-138px;
+    text-align:center;
+    opacity:0.9;
+    filter:alpha(opacity=90);
+}
+
+#login {
+    margin-left:20px;
+}
+
+#login .tips {
+    margin-left:50px;
+    font-size:12px;
+    margin-bottom:-5px;
+}
+
+#login .tips a {
+    color:#039;
+    font-size:16px;
+    text-decoration:underline;
+}
+
+#login .tips a:hover {
+}
+
+#login .msg {
+    color:red;
+}
+
+#login label {
+    height:30px;
+    line-height:30px;
+    font-size:16px;
+}
+
+#login .ipt {
+    background:#fff;
+    border:1px solid #ccc;  
+    height:28px;
+    line-height:28px;
+    margin-bottom:10px;
+    box-shadow:0 1px 0 #fff;
+    border-radius:2px;
+    width:200px;
+}
+
+#login .ipt:focus {
+    box-shadow:0 0 3px rgba(86,180,289,0.3);
+    border:1px solid #56b4ef;
+}
+
+#lotteryMsg {
+    height: auto!important;
+}
+
+#lotteryMsg p{
+    color: #553a0c;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 25px;
+}
+
+#lotteryMsg .msg {
+    display: inline;
+    zoom:1;
+    font-weight:bold;
+    margin-right: 10px; 
+    text-align:left;
+    font-size:24px;
+    color:#000;
+    line-height:1;
+}
+
+#lotteryMsg .msg span {
+    color: #ff7200;
+}
+
+#lotteryMsg .tips {
+    zoom:1;
+    text-align:right;
+    line-height: 26px;
+    color: #553a0c;
+    font-size:16px;
+    text-decoration: underline;
+}
+
+#lotteryMsg .sp {
+    border-top:1px solid #c3c3c3;
+    border-bottom:0 none transparent;
+    border-right:0 none transparent;
+    border-left:0 none transparent;
+    overflow:hidden;
+    height:0;
+    margin:10px 0;
+}
+
+#lotteryMsg a {
+    color:#138cbe;
+}
+
+#lotteryMsg a:hover {
+    color:#039;
+}
+
+#lotteryMsg .content {
+    border:1px solid #ccc;
+    border-radius:5px;
+    padding:10px;
+    background:#fff;
+    line-height:1.5;
+}
+
+#lotteryMsg .lotteryuser span {
+    margin-right: 15px;
+}
+
+#lotteryMsg .lotteryuser i {
+    margin-right: 2px;
+}
+
+#top-menu-wrapper {
+    height:51px;
+    background:url('/img/turnplate/bg_02.png') top center repeat-x;
+    margin-bottom:-51px;
+}
+
+#top-menu {
+    width:960px;
+    margin:0 auto;
+}
+
+#top-menu a, #top-menu span {
+    line-height:50px;
+    display:inline-block;
+    font-size:16px;
+    color:#fff;
+    text-decoration:1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+#top-menu .user {
+    padding-left:30px;
+    display:inline-block;
+    height:50px;
+    color:#fff;
+    background:url('/img/turnplate/bg_03.png') 0 16px no-repeat;
+}
+
+html .dialog {border:30px solid #00A1e8;color:#00629d;font-size:14px;}
+html .dialog-close {right:-25px;top:-25px;}
+.tc {text-align:center;}
+.btn {color:#fff;padding:10px 70px;background:#f28f00;display:inline-block;font-size:14px;}
+.btn:hover {opacity:0.9;filter:alpha(opacity=90);}
+.password, .username {width:150px;background:#EDE4f9;border:1px solid #00A1e8;line-height:20px;height:20px;}
+#login-box {line-height:22px;}
+.mt20 {margin-top:20px;}
+.submit {border:0 none transparent;color:#fff;padding:10px 70px 5px;background:#f28f00;display:inline-block;font-size:14px;}
+#login-form .other-login {vertical-align:bottom;width:20px;height:20px;margin-left:5px;display:inline-block;background:url('http://s3.kuaipan.cn/i/6/plant/021.png') no-repeat;}
+#login-form #login-by-qq {background-position:0 -20px;}
+#login-form #login-by-sina {background-position:0 0;}
+#login-form #login-by-xiaomi {background-position:0 -40px;}
+.mb20 {margin-bottom:20px;}
+#rule p {margin-left:15px;font-size:14px;line-height:2;}
+#rule {position:relative;background:url('http://s3.kuaipan.cn/i/6/turnplate2/011.png') no-repeat top right;}
+</style>
+	<style>
+		#adoverlay {
+			position:absolute;
+			top:0px;
+			left:0px;
+			z-index:1000000000;
+			background-color:rgba(255,255,255,0.7);
+			display:none;
+		}
+	  	#adclose {
+	  		position:absolute;
+	  		font-size:24px;
+	  		height:24px;
+	  		width:24px;
+	  		top:0px;
+	  		right:0px;
+	  		padding:3px;
+	  		background:#fff url('http://s3.kuaipan.cn/i/6/icon/012.png') no-repeat 3px 3px;
+	  		/*
+	  		border:2px solid #000;
+	  		*/
+	  		color:rgba(0,0,0,0.7);
+	  		text-align:center;
+	  		/*
+	  		line-height:30px;
+	  		border-radius:16px;
+	  		*/
+	  	}
+	  	#my-ad-slot {
+	  		margin: 0 auto;
+	  		width:300px;
+	  		position:relative;
+	  	}	
+	</style>
+</head>
+<body>
+<!--Content-->
+
+</head>
+<body>
+<div id="content">
+    <div id="turnplatewrapper" onselectstart="return false;" class="bgfix">
+        <div id="turnplate" class="bgfix">
+
+            <div id="awards" class="bgfix">
+                <div id="platebtn" class="bgfix" data-ca="turnplate-click">
+                </div>
+                <p id="msg">
+                </p>
+                <p id="init" class="dn">
+                    初始化中，请稍候<span></span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="rule" style="color:#006fb9;width:693px;margin:20px auto;">
+        <h2><img src="http://s2.kuaipan.cn/i/6/turnplate2/007.png" /></h2> 
+        <p class="mt10">每日登录快盘获得一次抽奖机会（不限客户端）</p>
+        <p style="color:#e98300">活动期间登录快盘手机端额外增加一次抽奖机会</p>
+        <p>提示：抽中的空间，系统将自动添加到您的账户，查看 <a style="color:#069" data-ca="turnplate-space-record" href="/n/user/records/grow">空间变化</a></p>
+        <p style="position:absolute;top:145px;right:15px;color:#767676;font-size:12px;font-weight:bold;">扫一扫，下载手机端</p>
+    </div>
+</div>
+<div id="adoverlay">
+    <div id="hbox">
+      <div id="my-ad-slot">
+	  	<div id="adclose"> </div>
+	  	<script>
+		var inmobi_conf = {
+			siteid : "212bd9bd375144ac9eda1aa523bbe376",
+			slot : 14,
+			manual: true,
+		    //adtype: "int"
+		    onError : function(code) {
+		    	if(code == "nfr") {
+		    		document.getElementById("adoverlay").style.display = "none";
+		    	}
+		    }
+		};
+		</script>
+		<script type="text/javascript" src="http://cf.cdn.inmobi.com/ad/inmobi.js"></script> 
+        </div>
+    </div>
+</div>
+<!--Js-->
+<script type="text/javascript" src="http://web.kuaipan.cn/js/jquery-1.7.1.min.js"></script><script>
+	$('#main').css({'width': $('#main').width()});
+</script>
+<script type="text/javascript">
+var inmobi_conf = {
+	siteid : "212bd9bd375144ac9eda1aa523bbe376",
+	slot : 10,
+	manual: true,
+    //adtype: "int"
+    onError : function(code) {
+    	if(code == "nfr") {
+    		document.getElementById("adoverlay").style.display = "none";
+    	}
+    }
+};
+function showInterstitial() {
+	_inmobi.getNewAd(document.getElementById('my-ad-slot'));
+	document.getElementById('adoverlay').style.display = 'block';
+	$.post('/h5/adshowed',function(){}) //发送请求
+}
+function hideInterstitial() {
+	$('#adoverlay').fadeOut();
+}
+$('#adclose').click(function() {
+	hideInterstitial();
+})
+
+_inmobi.addEventListener("close", hideInterstitial);
+
+</script>
+<script>
+;(function(d,s,j,c,x,y){window.KSCA=c;x=d.createElement(s),y=d.getElementsByTagName(s)[0];x.async=1;x.src=j;y.parentNode.insertBefore(x,y)})(document,'script','//s6.kuaipan.cn/j/pub/ca/10.js',{f:'kp-home',u:'',c:{'activity': {'id':0, 'source':7}}});
+</script>
+<script type="text/javascript" src="http://web.kuaipan.cn/js/plugins/login2.js"></script><script src="http://s1.kuaipan.cn/j/pub/jsbn/1.4.js"></script>
+<script type="text/javascript" src="http://web.kuaipan.cn/js/plugins/dialog.js"></script><script>
+var isLogin = false;
+</script>
+<script>
+var turnplate = {
+    turnplateBox : $('#turnplate'),
+    turnplateBtn : $('#platebtn'),
+    lightDom : $('#turnplatewrapper'),
+    freshLotteryUrl : '/turnplate/freshLottery/',
+    msgBox : $('#msg'),
+    lotteryUrl : '/turnplate/lottery/',
+    height : '693', //帧高度
+    lightSwitch : 0, //闪灯切换开关. 0 和 1间切换
+    minResistance : 5, //基本阻力
+    Cx : 0.01, //阻力系数 阻力公式：  totalResistance = minResistance + curSpeed * Cx;   
+    accSpeed : 30, //加速度
+    accFrameLen : 30, //加速度持续帧数
+    maxSpeed : 250, //最大速度 
+    minSpeed : 30, //最小速度 
+    frameLen : 10, //帧总数
+    totalFrame : 0, //累计帧数,每切换一帧次数加1
+    curFrame : 0, //当前帧
+    curSpeed : 20, //上帧的速度
+    lotteryTime : 0, //抽奖次数
+    lotteryIndex : 4, //奖品index
+    errorIndex : 4, //异常时的奖品指针
+    initBoxEle : $('#turnplate #init'),
+    progressEle : $('#turnplate #init span'),
+    initProgressContent : '~~~^_^~~~', //初始化进度条的内容
+    initFreshInterval : 500, //进度条刷新间隔
+    virtualDistance : 10000, //虚拟路程,固定值，速度越快，切换到下帧的时间越快: 切换到下帧的时间 = virtualDistance/curSpeed
+    isStop : false, //抽奖锁,为true时，才允许下一轮抽奖
+    timer2 : undefined, //计时器
+    initTime : undefined,
+    showMsgTime : 2000, //消息显示时间
+    lotteryChannel: '',
+
+    channelList: {
+        'login': '每日登录',
+        'consume': '购买空间'
+    },
+
+    lotteryType : {
+        '2G': 0,
+        '3G': 1,
+        '30G': 2,
+        '1T': 3,
+        'empty': 4,
+        '30M': 5,
+        '100M': 6,
+        '200M': 7,
+        '500M': 8,
+        '1G': 9
+    },
+
+    lotteryList : [
+        '2G免费空间',       
+        '3G免费空间',       
+        '30G免费空间',      
+        '1T免费空间',       
+        '继续攒人品',        
+        '30M免费空间',      
+        '100M免费空间',     
+        '200M免费空间',
+        '500M免费空间',
+        '1G免费空间'
+    ],
+
+    //初始化
+    init : function() {
+        this.initAnimate()
+        this.freshLottery();
+        this.turnplateBtn.click($.proxy(function(){
+            this.click();   
+        },this));   
+    },
+
+    //初始化动画
+    initAnimate : function() {
+        this.initBoxEle.show();
+        clearTimeout(this.initTimer);
+        var curLength = this.progressEle.text().length,
+            totalLength = this.initProgressContent.length;
+
+        if (curLength < totalLength) {
+            this.progressEle.text(this.initProgressContent.slice(0, curLength + 1));
+        }else{
+            this.progressEle.text('');
+        }
+        this.initTimer = setTimeout($.proxy(this.initAnimate, this), this.initFreshInterval);
+    },
+
+    //停止初始化动画
+    stopInitAnimate : function() {
+        clearTimeout(this.initTimer);
+        this.initBoxEle.hide();
+    },
+
+    freshLotteryTime : function() {
+        $('#top-menu').find('.lottery-times').html(this.lotteryTime);
+    },
+
+    //更新抽奖次数
+    freshLottery : function() {
+        $.post(this.freshLotteryUrl, $.proxy(function(data){
+            if(data.status == 'ok'){
+                this.stopInitAnimate();
+                this.setBtnHover();
+                this.isStop = true;
+                this.lotteryTime = data.data.total;
+                this.freshLotteryTime();
+            }else{
+                this.initBoxEle.html('初始化失败 {{{>_<}}} <a style="color:#039;" href="javascript:location.reload();">重试</a>')
+            }
+        }, this),'json');                       
+    },
+
+    //设置按钮三态
+    setBtnHover : function() {
+        //按钮三态
+        $('#platebtn').hover(function(){
+            $(this).addClass('hover');
+        },function() {
+            $(this).removeClass('hover click');
+        }).mousedown(function(){
+            $(this).addClass('click');
+        }).mouseup(function(){
+            $(this).removeClass('click');
+        }); 
+    },
+
+    //获取奖品
+    lottery : function() {
+        this.lotteryIndex = undefined;
+        this.lotteryTime--;
+        this.freshLotteryTime();
+        this.totalFrame = 0;
+        this.curSpeed = this.minSpeed;
+        this.turnAround();
+        $.post(this.lotteryUrl, $.proxy(function(data){
+            if(data.status == 'ok'){
+                this.lotteryIndex = typeof this.lotteryType[data.data.awardType] !== 'undefined' ? this.lotteryType[data.data.awardType] : this.errorIndex;
+                this.lotteryChannel = typeof this.channelList[data.data.channel] !== 'undefined' ? this.channelList[data.data.channel] : '';
+                this.lotteryExtInfo = data.data.ext;
+            }else if(data.status == 'noChance'){
+                this.lotteryIndex = this.errorIndex;
+                this.showMsg2('noChance');
+            }else{
+                this.lotteryIndex = this.errorIndex;
+                this.showMsg('额，大转盘生病了呢,暂时不能抽奖了哦，过会儿再来吧。么么哒^_^');
+            }
+        }, this),'json');                       
+    },
+
+    //点击抽奖
+    click : function() {
+        //加锁时
+        if(this.isStop == false) {
+            return;
+        } 
+
+        //抽奖次数不足
+        if(this.lotteryTime <= 0) {
+            //频繁点击会闪灯
+            var display = this.msgBox.css('display');
+            if(display == 'block') {
+                this.switchLight();
+            }
+
+            this.showMsg2('noChance');
+            return;
+        }
+
+        this.lottery();
+
+    },
+
+    //更新当前速度
+    freshSpeed : function() {
+        var totalResistance = this.minResistance + this.curSpeed * this.Cx;
+        var accSpeed = this.accSpeed;
+        var curSpeed = this.curSpeed;
+        if(this.totalFrame >= this.accFrameLen) {
+            accSpeed = 0;
+        }
+        curSpeed = curSpeed - totalResistance + accSpeed;
+
+        if(curSpeed < this.minSpeed){
+            curSpeed = this.minSpeed;
+        }else if(curSpeed > this.maxSpeed){
+            curSpeed = this.maxSpeed;
+        }
+
+        this.curSpeed  = curSpeed;
+    },
+
+    //闪灯,切换到下一张时调用
+    switchLight : function() {
+        this.lightSwitch = this.lightSwitch === 0 ? 1 : 0;
+        var lightHeight = -this.lightSwitch * this.height;
+        this.lightDom.css('backgroundPosition','0 ' + lightHeight.toString() + 'px');   
+    },
+
+    //旋转,trunAround,changeNext循环调用
+    turnAround : function() {
+        //加锁
+        this.isStop = false;
+        var intervalTime = parseInt(this.virtualDistance/this.curSpeed);        
+        this.timer = window.setTimeout('turnplate.changeNext()', intervalTime);     
+    },
+
+    //弹出奖品
+    showAwards : function(){
+        this.showMsg2('award');
+    },
+
+    //显示提示信息
+    showMsg : function(msg, isFresh) {
+        isFresh = typeof isFresh == 'undefined' ? false : true;
+        if(typeof msg != 'string'){
+            msg = '今天已经抽过奖了，明天再来吧';
+        }
+        var msgBox = this.msgBox;
+        var display = msgBox.css('display');
+
+        msgBox.html(msg);   
+
+        window.clearTimeout(this.timer2);
+        msgBox.stop(true,true).show();
+        var fadeOut = $.proxy(function() {
+            this.msgBox.fadeOut('slow');
+        }, this);
+        this.timer2 = window.setTimeout(fadeOut, this.showMsgTime);
+    },
+
+
+    //切换到下帧
+    changeNext : function() {
+        //判断是否应该停止
+        if(this.lotteryIndex !== undefined && this.curFrame == this.lotteryIndex && this.curSpeed <= this.minSpeed+10 && this.totalFrame > this.accFrameLen) {
+            this.isStop = true;
+            this.showAwards();
+            return;         
+        }
+
+        var nextFrame =  this.curFrame+1 < this.frameLen ? this.curFrame+1 : 0;
+        var bgTop = - nextFrame * this.height;      
+        this.turnplateBox.css('backgroundPosition','0 ' + bgTop.toString() + 'px'); 
+        this.switchLight();
+        this.curFrame = nextFrame;
+        this.totalFrame ++;
+        this.freshSpeed();
+        this.turnAround();
+    },
+
+    //弹框
+    showMsg2 : function(type, title, style, ext1, ext2) {
+        var title = typeof title == 'undefined' ? '' : title;
+        var style = typeof title == 'undefined' ? 'award-show-box' : style;
+        var msg='', tpl = [
+            '<div id="info-dialog" class="'+style+'">',
+                '<h3>'+title+'</h3>',   
+                '<div class="content">',
+                '</div>',
+            '</div>'
+        ].join('');
+
+        switch(type){
+
+            case 'award':
+                msg = [
+                    '<div>',
+                        '<p class="tc mt30">恭喜你获得 <span style="color:red">'+this.lotteryList[this.lotteryIndex]+'</span>！</p>',
+                        '<p class="tc mt10">赶紧去手机端试试手气吧，还能再抽一次哦～</p>',
+                        '<div style="margin-top:20px" class="tc"><a class="btn" href="javascript:infoDialog.hide();">确定</a></div>',
+                        '<div style="margin-top:20px;margin-bottom:10px" class="tc"><img src="http://s2.kuaipan.cn/i/6/turnplate2/010.png" /></div>',
+                    '</div>'
+                ].join('');
+                break;
+            case 'noChance':
+                msg = [
+                    '<div>',
+                        '<p class="tc mt30">今天的运气用光啦，明天再来呦～</p>',
+                        '<p class="tc mt10">赶紧上个提醒，明天一定转个惊喜～</p>',
+                        '<div style="margin-top:20px;margin-bottom:20px;" class="tc"><a class="btn" href="javascript:infoDialog.hide();">确定</a></div>',
+                    '</div>'
+                ].join('');
+                break;
+            case 'noLogin':
+                msg = [
+                    '<div id="login-box">',
+                        '<form id="login-form" method="post" action="/accounts/login/" onsubmit="return false;">',
+                            '<p class="mt30 tc">您当前未登录，请先登录后再来试试手气</p>',
+                            '<div class="mt20 tc">',
+                                '<label for="username">账号：</label><input type="text" name="username" class="username" /><a data-ca="turnplate-reg" style="font-size:12px;vertical-align:bottom;margin-left:10px;" href="/user/reg/">注册账号</a>',
+                            '</div>',
+                            '<div class="mt20 tc">',
+                                '<label for="password">密码：</label><input type="password" name="password" class="password" /><a data-ca="trunplate-forgot" style="font-size:12px;vertical-align:bottom;margin-left:10px;" href="/user/resetPassword">忘记密码</a>',
+                            '</div>',
+                            '<div style="margin-left:115px;color:red;">',
+                                '<span class="msg">&nbsp;</span>',
+                            '</div>',
+                            '<div class="tc">',
+                                '<input class="submit btn" data-ca="turnplate-login" style="margin-right:20px;" type="submit" value="登录" />',
+                            '</div>',
+                            '<div style="">',
+                                '<input id="remember" type="hidden" />',
+                            '</div>',
+                            '<div style="margin-bottom:10px;margin-top:10px" class="tc">',
+                                '<span style="font-size:12px;">合作账号登录：</span><a data-ca="turnplate-loginqq" title="QQ账号登录" href="javascript:;" id="login-by-qq" class="other-login"></a><a data-ca="turnplate-loginsina" title="新浪微博账号登录" href="javascript:;" id="login-by-sina" class="other-login"></a><a data-ca="turnplate-loginmi" title="小米账号登录" id="login-by-xiaomi" href="javascript:;" class="other-login"></a>',
+                            '</div>',
+
+                        '</form>',
+                    '</div>'
+                ].join('');
+                break;
+            default:
+                msg = [
+                        '<div class="to-upload">',
+                            '<p class="tc">'+type+'</p>',
+                            '<div style="margin-top:20px" class="tc"><a class="btn" href="javascript:infoDialog.hide();">关闭</a></div>',
+                        '</div>'
+                ].join('');
+        }
+
+        tpl = [
+            '<div id="info-dialog" class="'+style+'">',
+                '<h3>'+title+'</h3>',   
+                '<div class="content">',
+                msg,
+                '</div>',
+            '</div>'
+        ].join('');
+
+        if(typeof infoDialog !== 'undefined'){
+            infoDialog.hide();      
+            $('#info-dialog').replaceWith(tpl);
+            infoDialog.show();      
+        } else {
+            window.infoDialog = new Dialog({'html': tpl});
+        }
+
+    }
+}
+
+</script>
+<script>
+//当前页登录
+if(isLogin){
+    turnplate.init();   
+}else{
+    $('#platebtn').click(function(){
+        turnplate.showMsg2('noLogin');
+        $('#login-form').login({success:loginSuccess});
+        //第三方登录
+        var callbackUrl = encodeURIComponent('http://www.kuaipan.cn/turnplate');
+        $('#login-by-qq').click(function() {
+            window.open('http://www.kuaipan.cn/user/openlogin?t=qq&pop=true&c=' + callbackUrl,"top", "width=700,height=500,menubar=0,scrollbars=1, resizable=1,status=1,titlebar=0,toolbar=0,location=1");
+        });
+
+        $('#login-by-sina').click(function() {
+            window.open('http://www.kuaipan.cn/user/openlogin?t=weibo&pop=true&c=' + callbackUrl,"top", "width=700,height=500,menubar=0,scrollbars=1, resizable=1,status=1,titlebar=0,toolbar=0,location=1");
+        });
+
+        $('#login-by-xiaomi').click(function() {
+            window.location.href = 'https://account.xiaomi.com/pass/serviceLogin?sid=kuaipan&callback=http%3A%2F%2Fpan.xiaomi.com%2Faccount.htm%3Fdevice%3Dweb%26callback%3D'+encodeURIComponent(callbackUrl)+'&passive=true'
+        });
+    })
+    turnplate.setBtnHover();
+}
+//登录初始化
+function loginSuccess() {
+    window.location.reload();
+}
+</script>
+<script>
+$(window).resize(initadoverlay);
+function initadoverlay(){
+	var documentElement = document.documentElement;
+	var width = documentElement.scrollWidth;
+    var height = documentElement.scrollHeight > documentElement.clientHeight ? documentElement.scrollHeight : documentElement.clientHeight;
+    if(documentElement.clientHeight > 250) {
+    	$('#my-ad-slot').css({'marginTop': (documentElement.clientHeight-250)/2});
+    }
+	$('#adoverlay').css({'height': height, 'width': width});
+}
+initadoverlay()
+</script>
+</body> 
+</html>
