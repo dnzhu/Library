@@ -205,3 +205,23 @@
 	/*第2种方式, 使用时, 可以直接 $_GET['get参数'], 就直接获得GET参数的值*/
 
 
+**Get values from multiple inputs jQuery**
+
+	<input name="titles[]">
+	<input name="titles[]">
+	<button>submit</button>
+	
+	// click handler
+	function onClick(event) {
+	  var titles = $('input[name^=titles]').map(function(idx, elem) {
+	    return $(elem).val();
+	  }).get();
+	
+	  console.log(titles);
+	  event.preventDefault();
+	}
+	
+	// attach button click listener on dom ready
+	$(function() {
+	  $('button').click(onClick);
+	});
