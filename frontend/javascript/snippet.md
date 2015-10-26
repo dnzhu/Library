@@ -225,3 +225,15 @@
 	$(function() {
 	  $('button').click(onClick);
 	});
+
+
+**判断Object是否为空**
+
+	function isEmpty(obj) {
+	    for(var prop in obj) {
+	        if(obj.hasOwnProperty(prop))
+	            return false;
+	    }
+	
+	    return true;
+	}
