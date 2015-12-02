@@ -258,3 +258,14 @@
 	
 	    return true;
 	}
+	
+**JS动态变量**
+	
+	var fullname = {
+	  firstname: 'tian',
+	  lastname: 'jingwen'
+	};
+	
+	var replace = 'firstname'; 
+	
+	console.log(fullname[this.replace]);
