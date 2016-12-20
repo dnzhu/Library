@@ -71,7 +71,5 @@
 - [imagesLoaded](http://imagesloaded.desandro.com/)
 - [Echo.js](https://github.com/toddmotto/echo)
 
-
-
-
-
+###7.4 文件压缩合并工具
+- [minify](https://github.com/mrclay/minify)
